@@ -9,56 +9,18 @@ html, body {
     height: 100%;
 }
 
-
 /* --------------- NAVBAR (ШАПКА) --------------- */
-/* Перекрашиваем стандартный .navbar-dark.bg-dark в нужный тёмно-синий */
+/* Тёмно-синий фон для navbar-dark bg-dark */
 .navbar-dark.bg-dark {
     background-color: #0A2342FF !important;
 }
-
-/* Задаём цвет текста “IT-навигатор” чуть светлее фиолетового */
+/* Цвет текста “IT-навигатор” */
 .navbar-brand .fs-5 {
     color: #dbdbff !important;
 }
 
-/* Логотип в шапке (если нужно уточнить) */
-.navbar-brand img.logo {
-    width: 32px;
-    height: auto;
-}
-
-
-/* --------------- OFFCANVAS SIDEBAR --------------- */
-/* Фон Sidebar уже даёт класс bg-dark, текст белый — но можно чуть подправить отступы */
-.offcanvas-body {
-    padding: 0; /* убираем лишние паддинги */
-}
-
-/* Стили ссылок внутри offcanvas */
-.offcanvas .nav-link {
-    color: #ffffff;
-    padding: 12px 16px;
-    font-size: 16px;
-    transition: background-color 0.2s ease;
-}
-.offcanvas .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Кнопка закрытия offcanvas (белый крестик) уже даёт btn-close-white, менять нечего */
-
-
-/* --------------- КНОПКА “АККАУНТ” --------------- */
-/*
-  Кнопка “Аккаунт” в шапке у нас имеет класс btn-light btn-sm me-3:
-    - btn-light мы переопределим чуть ниже,
-    - btn-sm — стандартный размер,
-    - me-3 даёт отступ справа (чтобы не прилипала вплотную к краю).
-  Дополнительных правок здесь не требуется.
-*/
-
 /* --------------- КНОПКИ В КОНТЕНТЕ --------------- */
-/* Задаём светлый фон, чёрный текст, плавное изменение цвета при ховере */
+/* btn-light: светлый фон и чёрный текст */
 .btn-light {
     background-color: #e0e0e0;
     color: #000;
@@ -67,49 +29,23 @@ html, body {
 .btn-light:hover {
     background-color: #d0d0d0;
 }
-
 /* Круглые (“pill”) границы */
 .rounded-pill {
     border-radius: 30px !important;
 }
 
-/* Дополнительно можно задать отступы у текста внутри,
-   но при использовании px-4 py-2 (в HTML) этого будет достаточно. */
-
-
-/* --------------- ОСНОВНОЙ КОНТЕНТ (ФИОЛЕТОВЫЙ ФОН) --------------- */
+/* --------------- ОБЛАСТЬ С ФОНОМ (сейчас фон задаётся инлайн) --------------- */
 /*
-  В HTML-шаблоне у вас было:
-    <main class="…" style="height: calc(100vh - 56px); background-color: #9754a6;">
-  Если хотите вынести эти стили в класс, можно добавить:
-
-  .content-area {
-      height: calc(100vh - 56px);
-      background-color: #9754a6;
-  }
-
-  и тогда в HTML заменить inline-style на class="content-area".
-
-  Но если вы оставляете inline-style — этот пункт можно не учитывать.
+   Если захотите вынести фон в CSS, можно добавить сюда:
+   .content-area {
+       height: calc(100vh - 56px);
+       background:
+         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+         url('../images/обои.jpg') no-repeat center center;
+       background-size: cover;
+   }
+   И в HTML указать <main class="content-area …">
 */
 
-
-/* --------------- ДОПОЛНИТЕЛЬНЫЕ ПРАВКИ --------------- */
-/* Если нужно, чтобы при открытии offcanvas контент не “скакал”, можно добавить transition */
-body.offcanvas-open {
-    /* это можно не использовать, но иногда нужен класс для фиксации боди */
-}
-
-/* Пример, если захочется понизить высоту navbar чуть меньше 56px:
-.navbar {
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
-}
-*/
-
-
-/* --------------- НАКОНЕЦ: ПЕРЕВОД БУРГЕР-КНОПКИ В БЕЛЫЙ ЦВЕТ --------------- */
-/* По умолчанию .navbar-dark меняет цвет toggle-icon, но если иконка не белая, можно явно сграфитить: */
-.navbar-dark .navbar-toggler {
-    border-color: rgba(255,255,255,0.25);
-}
+/* --------------- ДОПОЛНИТЕЛЬНЫЕ ПРАВКИ (при необходимости) --------------- */
+/* Например, если когда-нибудь захочется уменьшить высоту navbar */
