@@ -5,110 +5,129 @@
     <meta charset="UTF-8">
     <title>IT-навигатор</title>
 
-    <!-- Подключаем Bootstrap 5 CSS из CDN -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
-          rel="stylesheet">
+    <!-- Bootstrap 5 CSS из CDN -->
+    <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha512-…"
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+    >
 
-    <!-- Ваши дополнительные стили (если нужны) -->
+    <!-- Кастомные стили -->
     <link rel="stylesheet" href="{% static 'deps/css/main.css' %}">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <!-- ========== Шапка (navbar) ========== -->
-    <nav class="navbar navbar-dark bg-dark py-2 px-3">
-        <div class="container-fluid">
-            <!-- Кнопка “бургер”, которая открывает offcanvas -->
-            <button
+<!-- Шапка (navbar) -->
+<nav class="navbar navbar-dark bg-dark py-2 px-5">
+    <div class="container-fluid">
+        <button
                 class="navbar-toggler"
                 type="button"
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasSidebar"
                 aria-controls="offcanvasSidebar"
                 aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Логотип + название -->
+        <a class="navbar-brand d-flex align-items-center ms-2" href="#">
+            <img
+                    src="{% static 'deps/images/Icon.png' %}"
+                    alt="Логотип"
+                    width="32"
+                    height="32"
+                    class="d-inline-block align-text-top me-2"
             >
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="fs-5">IT-навигатор</span>
+        </a>
 
-            <!-- Логотип + название -->
-            <a class="navbar-brand d-flex align-items-center ms-2" href="#">
-                <!-- Обратите внимание: используем вашу картинку -->
-                <img src="{% static 'deps/images/Icon.png' %}"
-                     alt="Логотип"
-                     width="32"
-                     height="32"
-                     class="d-inline-block align-text-top me-2"
-                >
-                <span class="fs-5">IT-навигатор</span>
-            </a>
-
-            <!-- Кнопка “Аккаунт” с отступом справа -->
-            <div class="d-flex align-items-center">
-                <a href="#" class="btn btn-light btn-sm me-3">Аккаунт</a>
-            </div>
+        <!-- Кнопка “Аккаунт” -->
+        <div class="d-flex align-items-center">
+            <a href="#" class="btn btn-light btn-sm me-5">Аккаунт</a>
         </div>
-    </nav>
+    </div>
+</nav>
 
-    <!-- ========== Offcanvas Sidebar ========== -->
-    <div
+<!-- Offcanvas Sidebar -->
+<div
         class="offcanvas offcanvas-start bg-dark text-white"
         tabindex="-1"
         id="offcanvasSidebar"
         aria-labelledby="offcanvasSidebarLabel"
-    >
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Меню</h5>
-            <button
+>
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Меню</h5>
+        <button
                 type="button"
                 class="btn-close btn-close-white"
                 data-bs-dismiss="offcanvas"
                 aria-label="Close"
-            ></button>
-        </div>
-        <div class="offcanvas-body p-0">
-            <nav class="nav flex-column">
-                <!-- Секция навигации -->
-                <a class="nav-link text-white px-3 py-2" href="#">
-                    IT-решения
-                </a>
-                <!-- Добавляйте новые пункты по аналогии -->
-                <!--
-                <a class="nav-link text-white px-3 py-2" href="#">Запросы</a>
-                <a class="nav-link text-white px-3 py-2" href="#">Профиль</a>
-                -->
-            </nav>
+        ></button>
+    </div>
+    <div class="offcanvas-body p-0">
+        <nav class="nav flex-column">
+            <a class="nav-link text-white px-3 py-2" href="#">
+                КАТАЛОГ IT-РЕШЕНИЙ
+            </a>
+        </nav>
+    </div>
+</div>
+
+<!-- Основная область содержимого -->
+<div class="container-fluid p-0">
+    <div class="row gx-0">
+        <div class="col-12">
+            <main
+                    class="d-flex flex-column justify-content-center align-items-center"
+                    style="
+                            height: calc(100vh - 56px);
+                            /* Вместо одного background-image задаём сразу градиент + картинку: */
+                            background:
+                            linear-gradient(
+                            rgba(0, 0, 0, 0.5),   /* верхний полупрозрачный чёрный */
+                            rgba(0, 0, 0, 0.5)    /* нижний такой же */
+                            ),
+                            url('{% static 'deps/images/обои.jpg' %}') no-repeat center center;
+                            background-size: cover;
+                            "
+            >
+
+                <!-- ===== ТЕКСТ ПО ЦЕНТРУ (выше кнопок) ===== -->
+                <div class="text-center text-white mb-5 px-3">
+                    <p class="fs-5 mb-2">
+                        Информационный сервис по поиску мер поддержки для ИТ-компаний
+                        и организаций иных сфер, внедряющих цифровые технологии
+                    </p>
+                    <p class="fs-5">
+                        Открытая платформа для размещения и поиска ИТ-решений
+                    </p>
+                </div>
+
+                <!-- ===== БЛОК С КНОПКАМИ (ниже текста) ===== -->
+                <div class="d-flex gap-4">
+                    <a href="#" class="btn btn-light rounded-pill px-4 py-2">
+                        Каталог IT-решений
+                    </a>
+                    <a href="#" class="btn btn-light rounded-pill px-4 py-2">
+                        Запросы на IT-решения
+                    </a>
+                </div>
+            </main>
         </div>
     </div>
+</div>
 
-
-    <!-- ========== Основная область содержимого ========== -->
-    <div class="container-fluid p-0">
-        <div class="row gx-0">
-            <!-- Этот div оставляем, чтобы offcanvas перекрывал контент при открытии -->
-            <div class="col-12">
-
-                <!-- Контентная область с фиолетовым фоном и двумя кнопками -->
-                <main class="d-flex justify-content-center align-items-center"
-                      style="height: calc(100vh - 56px); background-color: #9754a6;">
-                    <div class="d-flex gap-4">
-                        <a href="#" class="btn btn-light rounded-pill px-4 py-2">
-                            Каталог IT-решений
-                        </a>
-                        <a href="#" class="btn btn-light rounded-pill px-4 py-2">
-                            Запросы на IT-решения
-                        </a>
-                    </div>
-                </main>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Подключаем Bootstrap 5 JS (Popper.js + собственно Bootstrap) из CDN -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-qmWcERu74LRRTllc2xhE+63rX6bLsUOre5Vm9SHfYCq3rWzy1sJjCotcxGa53hts"
-      crossorigin="anonymous"
-    ></script>
+<!-- Bootstrap JS bundle -->
+<script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha512-…"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
 </body>
 </html>

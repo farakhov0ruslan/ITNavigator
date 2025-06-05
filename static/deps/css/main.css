@@ -13,7 +13,7 @@ html, body {
 /* --------------- NAVBAR (ШАПКА) --------------- */
 /* Перекрашиваем стандартный .navbar-dark.bg-dark в нужный тёмно-синий */
 .navbar-dark.bg-dark {
-    background-color: #0a2342 !important;
+    background-color: #0A2342FF !important;
 }
 
 /* Задаём цвет текста “IT-навигатор” чуть светлее фиолетового */
