@@ -5,75 +5,130 @@
 
 {% block head %}
 <style>
-  /* Стили для панели поиска / счетчик / кнопки Фильтры */
+  /* ─── Шапка: поиск + счётчик + кнопка Фильтры ───────────────────────────── */
   .catalog-header {
-    background-color: #3c2a62;
-    color: #fff;
     padding: 1rem;
     border-radius: .5rem;
+    display: flex;
+    align-items: center;
   }
-  .catalog-header .total-count {
-    font-size: 1.25rem;
+
+  /* «Всего решений» – синее фоновое кольцо с закруглением */
+  .total-count {
+    background-color: #0A2342FF;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
+    white-space: nowrap;
+    margin-right: 1rem;
   }
-  .catalog-header .search-input {
-    width: 100%;
-    max-width: 400px;
+
+  /* Поле поиска растягивается между счётчиком и кнопкой Фильтры */
+  .search-input {
+    flex-grow: 1;
+    max-width: none;
+    margin-right: 1rem;
   }
-  .catalog-header .btn-filters {
+  .search-input::placeholder {
+    color: #ddd;
+  }
+  .search-input,
+  .search-input:focus {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+  }
+
+  /* Кнопка «Фильтры» */
+  .btn-filters {
     white-space: nowrap;
   }
 
-  /* Скрытая панель фильтров */
+  /* ─── Панель фильтров ───────────────────────────────────────────────────── */
   #filterCollapse {
-    background-color: #4f397c;
-    padding: 1rem;
-    border-radius: .5rem;
     margin-top: .5rem;
   }
-  #filterCollapse .form-label,
-  #filterCollapse .form-check-label {
+
+  /* Метки «Теги» и «Статус» – белые */
+  #filterCollapse .form-label {
     color: #fff;
+    display: block;
   }
-  #filterCollapse .btn-outline-primary,
-  #filterCollapse .btn-outline-light,
-  #filterCollapse .form-control {
-    background-color: #6b5598;
-    border-color: #8a6fc1;
-    color: #fff;
+
+  /* Чтобы статусовые кнопки выровнять сверху, а не по центру */
+  #filterCollapse .status-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: .25rem;
   }
-  #filterCollapse .btn-outline-primary:hover,
-  #filterCollapse .btn-outline-light:hover {
-    background-color: #806db6;
+
+  /* Кнопки-теги (outline-primary синий текст) */
+  #filterCollapse .btn.btn-outline-primary {
+    color: #0A2342;
+    border-color: #0A2342;
+    background-color: #fff;
+    margin: .15rem;
+  }
+  #filterCollapse .btn.btn-outline-primary:hover,
+  #filterCollapse .btn.btn-outline-primary:focus,
+  #filterCollapse input[type="checkbox"]:checked + .btn-outline-primary {
+    background-color: #0A2342;
     color: #fff;
+    border-color: #0A2342;
+  }
+
+  /* Кнопки-статус (outline-light → белые) */
+  #filterCollapse .btn.btn-outline-light {
+    color: #0A2342;
+    border-color: #0A2342;
+    background-color: #fff;
+    margin: .15rem;
+  }
+  #filterCollapse .btn.btn-outline-light:hover,
+  #filterCollapse .btn.btn-outline-light:focus,
+  #filterCollapse input[type="radio"]:checked + .btn-outline-light {
+    background-color: #0A2342;
+    color: #fff;
+    border-color: #0A2342;
+  }
+
+  /* ─── Сами карточки ─────────────────────────────────────────────────────── */
+  .card.custom-card {
+    background-color: #e8eff5; /* слегка серо-голубой */
+    border: none;
+  }
+  .card.custom-card .card-body,
+  .card.custom-card .card-img-top {
+    border-radius: 0.5rem 0.5rem 0 0;
   }
 </style>
 {% endblock %}
 
 {% block content %}
 <div class="container my-4">
-  <!-- Заголовок каталога -->
   <h2 class="mb-3 text-white">Каталог IT-решений</h2>
 
-  <!-- Панель поиска / счетчик / кнопка «Фильтры» -->
-  <div class="catalog-header d-flex flex-column flex-md-row align-items-center justify-content-between">
-    <!-- Слева: общее количество решений -->
-    <div class="total-count mb-2 mb-md-0">
-      Всего решений: <span id="totalCount">{{ page_content.solutions|length }}</span>
-    </div>
+  <form method="get" action="">
+    <div class="catalog-header">
+      <!-- Счетчик «Всего решений» -->
+      <div class="total-count">
+        Всего решений: <span id="totalCount">{{ page_content.solutions|length }}</span>
+      </div>
 
-    <!-- По центру: поле поиска -->
-    <div class="flex-grow-1 mx-md-3 mb-2 mb-md-0 text-center">
+      <!-- Поле поиска -->
       <input
         type="text"
+        name="q"
         class="form-control search-input"
         placeholder="Поиск решения…"
         aria-label="Поиск"
+        value="{{ page_content.search_query }}"
       >
-    </div>
 
-    <!-- Справа: кнопка открытия панели фильтров -->
-    <div>
+      <!-- Кнопка «Фильтры» -->
       <button
         class="btn btn-outline-light btn-filters"
         type="button"
@@ -85,105 +140,111 @@
         Фильтры
       </button>
     </div>
-  </div>
 
-  <!-- Скрытая панель фильтров (Collapse) -->
-  <div class="collapse" id="filterCollapse">
-    <div class="row g-3" id="filterPanel">
-      <!-- Фильтрация по тегам -->
-      <div class="col-12 col-md-6">
-        <label class="form-label">Теги:</label>
-        <div class="btn-group d-flex flex-wrap" role="group" aria-label="Фильтр по тегам">
-          {% comment %}
-            Для каждого тега из контекста page_content.tags создаём уникальный id через slugify,
-            чтобы не было дублирования. Проверяйте, что фильтр slugify установлен в вашем Django.
-          {% endcomment %}
-          {% for tag in page_content.tags %}
-            {% with tag_slug=tag|slugify %}
-              <input
-                type="checkbox"
-                class="btn-check"
-                name="tags"
-                id="filterTag_{{ tag_slug }}"
-                value="{{ tag_slug }}"
-                autocomplete="off"
-              >
-              <label
-                class="btn btn-outline-primary me-2 mb-2"
-                for="filterTag_{{ tag_slug }}"
-              >
-                {{ tag }}
-              </label>
-            {% endwith %}
-          {% empty %}
-            <span class="text-light">Нет доступных тегов</span>
-          {% endfor %}
+    <!-- Панель фильтров -->
+    <div class="collapse" id="filterCollapse">
+      <div class="row g-3">
+        <!-- Фильтрация по тегам -->
+        <div class="col-12 col-md-6">
+          <label class="form-label">Теги:</label>
+          <div class="d-flex flex-wrap">
+            {% for tag in page_content.tags %}
+              {% with tag_slug=tag.slug %}
+                <input
+                  type="checkbox"
+                  class="btn-check"
+                  name="tags"
+                  id="filterTag_{{ tag_slug }}"
+                  value="{{ tag_slug }}"
+                  autocomplete="off"
+                  {% if tag_slug in page_content.selected_tags %}checked{% endif %}
+                >
+                <label
+                  class="btn btn-outline-primary"
+                  for="filterTag_{{ tag_slug }}"
+                >
+                  {{ tag.name }}
+                </label>
+              {% endwith %}
+            {% empty %}
+              <span class="text-light">Нет доступных тегов</span>
+            {% endfor %}
+          </div>
         </div>
-      </div>
 
-      <!-- Фильтрация по готовности (Стартап/Продукт) -->
-      <div class="col-12 col-md-6">
-        <label class="form-label">Статус:</label>
-        <div class="btn-group w-100" role="group" aria-label="Фильтр по статусу">
-          <input
-            type="radio"
-            class="btn-check"
-            name="statusOptions"
-            id="statusAll"
-            value="all"
-            autocomplete="off"
-            checked
-          >
-          <label class="btn btn-outline-light me-2 mb-2" for="statusAll">Все</label>
+        <!-- Фильтрация по статусу -->
+        <div class="col-12 col-md-6">
+          <label class="form-label">Статус:</label>
+          <div class="status-group">
+            <input
+              type="radio"
+              class="btn-check"
+              name="status"
+              id="statusAll"
+              value="all"
+              autocomplete="off"
+              {% if page_content.selected_status == 'all' %}checked{% endif %}
+            >
+            <label class="btn btn-outline-light" for="statusAll">Все</label>
 
-          <input
-            type="radio"
-            class="btn-check"
-            name="statusOptions"
-            id="statusStartup"
-            value="startup"
-            autocomplete="off"
-          >
-          <label class="btn btn-outline-light me-2 mb-2" for="statusStartup">Стартап</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="status"
+              id="statusStartup"
+              value="startup"
+              autocomplete="off"
+              {% if page_content.selected_status == 'startup' %}checked{% endif %}
+            >
+            <label class="btn btn-outline-light" for="statusStartup">Стартап</label>
 
-          <input
-            type="radio"
-            class="btn-check"
-            name="statusOptions"
-            id="statusProduct"
-            value="product"
-            autocomplete="off"
-          >
-          <label class="btn btn-outline-light mb-2" for="statusProduct">Продукт</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="status"
+              id="statusProduct"
+              value="product"
+              autocomplete="off"
+              {% if page_content.selected_status == 'product' %}checked{% endif %}
+            >
+            <label class="btn btn-outline-light" for="statusProduct">Продукт</label>
+          </div>
+        </div>
+
+        <!-- Кнопка «Применить» -->
+        <div class="col-12 text-end">
+          <button type="submit" class="btn btn-primary">Применить</button>
         </div>
       </div>
     </div>
-  </div>
+  </form>
 
   <!-- Сетка карточек -->
   <div class="row g-4 mt-3">
     {% for sol in page_content.solutions %}
       <div class="col-12 col-md-6 col-lg-4">
         <div
-          class="card h-100 shadow-sm"
+          class="card custom-card h-100 shadow-sm"
           data-bs-toggle="modal"
           data-bs-target="#detailModal"
           data-bs-title="{{ sol.title }}"
           data-bs-description="{{ sol.description }}"
-          data-bs-org="{{ sol.org }}"
+          data-bs-org="{{ sol.organization }}"
           data-bs-phone="{{ sol.phone }}"
           data-bs-email="{{ sol.email }}"
           data-bs-site="{{ sol.site }}"
-          data-bs-imgurl="{% static sol.img %}"
+          data-bs-imgurl="{% if sol.image %}{{ sol.image.url }}{% endif %}"
         >
-          <img
-            src="{% static sol.img %}"
-            class="card-img-top"
-            alt="{{ sol.title }}"
-          >
+          {% if sol.image %}
+            <img
+              src="{{ sol.image.url }}"
+              class="card-img-top"
+              alt="{{ sol.title }}"
+            >
+          {% endif %}
           <div class="card-body">
             <h5 class="card-title">{{ sol.title|truncatechars:45 }}</h5>
-            <p class="card-text">{{ sol.short|truncatechars:80 }}</p>
+            <p class="card-text">{{ sol.short_description|truncatechars:80 }}</p>
           </div>
         </div>
       </div>
@@ -195,7 +256,7 @@
   </div>
 </div>
 
-<!-- Общее модальное окно -->
+<!-- Модальное окно с деталями -->
 <div
   class="modal fade"
   id="detailModal"
@@ -207,20 +268,10 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="detailModalLabel"></h5>
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Закрыть"
-        ></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
       </div>
       <div class="modal-body">
-        <img
-          id="detailModalImage"
-          src=""
-          alt="Изображение"
-          class="img-fluid mb-3"
-        >
+        <img id="detailModalImage" src="" alt="Изображение" class="img-fluid mb-3">
         <p id="detailModalDescription"></p>
         <hr>
         <h6 class="fw-bold">Организация и контакты</h6>
@@ -230,38 +281,22 @@
         <p><strong>Сайт:</strong> <a id="detailModalSite" href="#" target="_blank"></a></p>
       </div>
       <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary"
-          data-bs-dismiss="modal"
-        >
-          Закрыть
-        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
       </div>
     </div>
   </div>
 </div>
 
-<!-- Скрипт для заполнения модального окна -->
 <script>
   const detailModal = document.getElementById('detailModal');
   detailModal.addEventListener('show.bs.modal', event => {
     const card = event.relatedTarget;
-
-    detailModal.querySelector('#detailModalLabel').textContent =
-      card.getAttribute('data-bs-title');
-    detailModal.querySelector('#detailModalImage').src =
-      card.getAttribute('data-bs-imgurl');
-    detailModal.querySelector('#detailModalDescription').textContent =
-      card.getAttribute('data-bs-description');
-
-    detailModal.querySelector('#detailModalOrg').textContent =
-      card.getAttribute('data-bs-org');
-    detailModal.querySelector('#detailModalPhone').textContent =
-      card.getAttribute('data-bs-phone');
-    detailModal.querySelector('#detailModalEmail').textContent =
-      card.getAttribute('data-bs-email');
-
+    detailModal.querySelector('#detailModalLabel').textContent = card.getAttribute('data-bs-title');
+    detailModal.querySelector('#detailModalImage').src = card.getAttribute('data-bs-imgurl');
+    detailModal.querySelector('#detailModalDescription').textContent = card.getAttribute('data-bs-description');
+    detailModal.querySelector('#detailModalOrg').textContent = card.getAttribute('data-bs-org');
+    detailModal.querySelector('#detailModalPhone').textContent = card.getAttribute('data-bs-phone');
+    detailModal.querySelector('#detailModalEmail').textContent = card.getAttribute('data-bs-email');
     const siteEl = detailModal.querySelector('#detailModalSite');
     siteEl.textContent = card.getAttribute('data-bs-site');
     siteEl.href = card.getAttribute('data-bs-site');
