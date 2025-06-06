@@ -4,302 +4,328 @@
 {% block title %}Каталог IT-решений{% endblock %}
 
 {% block head %}
-<style>
-  /* ─── Шапка: поиск + счётчик + кнопка Фильтры ───────────────────────────── */
-  .catalog-header {
-    padding: 1rem;
-    border-radius: .5rem;
-    display: flex;
-    align-items: center;
-  }
+	<style>
+        /* ─── Шапка: поиск + счётчик + кнопка Фильтры ───────────────────────────── */
+        .catalog-header {
+            padding: 1rem;
+            border-radius: .5rem;
+            display: flex;
+            align-items: center;
+        }
 
-  /* «Всего решений» – синее фоновое кольцо с закруглением */
-  .total-count {
-    background-color: #0A2342FF;
-    color: #fff;
-    padding: .5rem 1rem;
-    border-radius: 1rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    white-space: nowrap;
-    margin-right: 1rem;
-  }
+        /* «Всего решений» – синее фоновое кольцо с закруглением */
+        .total-count {
+            background-color: #0A2342FF;
+            color: #fff;
+            padding: .5rem 1rem;
+            border-radius: 1rem;
+            font-size: 1.1rem;
+            font-weight: 500;
+            white-space: nowrap;
+            margin-right: 1rem;
+        }
 
-  /* Поле поиска растягивается между счётчиком и кнопкой Фильтры */
-  .search-input {
-    flex-grow: 1;
-    max-width: none;
-    margin-right: 1rem;
-  }
-  .search-input::placeholder {
-    color: #ddd;
-  }
-  .search-input,
-  .search-input:focus {
-    background-color: #fff;
-    color: #000;
-    border: 1px solid #ccc;
-  }
+        /* Поле поиска растягивается между счётчиком и кнопкой Фильтры */
+        .search-input {
+            flex-grow: 1;
+            max-width: none;
+            margin-right: 1rem;
+        }
 
-  /* Кнопка «Фильтры» */
-  .btn-filters {
-    white-space: nowrap;
-  }
+        .search-input::placeholder {
+            color: #ddd;
+        }
 
-  /* ─── Панель фильтров ───────────────────────────────────────────────────── */
-  #filterCollapse {
-    margin-top: .5rem;
-  }
+        .search-input,
+        .search-input:focus {
+            background-color: #fff;
+            color: #000;
+            border: 1px solid #ccc;
+        }
 
-  /* Метки «Теги» и «Статус» – белые */
-  #filterCollapse .form-label {
-    color: #fff;
-    display: block;
-  }
+        /* Кнопка «Фильтры» */
+        .btn-filters {
+            white-space: nowrap;
+        }
 
-  /* Чтобы статусовые кнопки выровнять сверху, а не по центру */
-  #filterCollapse .status-group {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: .25rem;
-  }
+        /* ─── Панель фильтров ───────────────────────────────────────────────────── */
+        #filterCollapse {
+            margin-top: .5rem;
+        }
 
-  /* Кнопки-теги (outline-primary синий текст) */
-  #filterCollapse .btn.btn-outline-primary {
-    color: #0A2342;
-    border-color: #0A2342;
-    background-color: #fff;
-    margin: .15rem;
-  }
-  #filterCollapse .btn.btn-outline-primary:hover,
-  #filterCollapse .btn.btn-outline-primary:focus,
-  #filterCollapse input[type="checkbox"]:checked + .btn-outline-primary {
-    background-color: #0A2342;
-    color: #fff;
-    border-color: #0A2342;
-  }
+        /* Метки «Теги» и «Статус» – белые */
+        #filterCollapse .form-label {
+            color: #fff;
+            display: block;
+        }
 
-  /* Кнопки-статус (outline-light → белые) */
-  #filterCollapse .btn.btn-outline-light {
-    color: #0A2342;
-    border-color: #0A2342;
-    background-color: #fff;
-    margin: .15rem;
-  }
-  #filterCollapse .btn.btn-outline-light:hover,
-  #filterCollapse .btn.btn-outline-light:focus,
-  #filterCollapse input[type="radio"]:checked + .btn-outline-light {
-    background-color: #0A2342;
-    color: #fff;
-    border-color: #0A2342;
-  }
+        /* Чтобы статусовые кнопки выровнять сверху, а не по центру */
+        #filterCollapse .status-group {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: .25rem;
+        }
 
-  /* ─── Сами карточки ─────────────────────────────────────────────────────── */
-  .card.custom-card {
-    background-color: #e8eff5; /* слегка серо-голубой */
-    border: none;
-  }
-  .card.custom-card .card-body,
-  .card.custom-card .card-img-top {
-    border-radius: 0.5rem 0.5rem 0 0;
-  }
-</style>
+        /* Кнопки-теги (outline-primary синий текст) */
+        #filterCollapse .btn.btn-outline-primary {
+            color: #0A2342;
+            border-color: #0A2342;
+            background-color: #fff;
+            margin: .15rem;
+        }
+
+        #filterCollapse .btn.btn-outline-primary:hover,
+        #filterCollapse .btn.btn-outline-primary:focus,
+        #filterCollapse input[type="checkbox"]:checked + .btn-outline-primary {
+            background-color: #0A2342;
+            color: #fff;
+            border-color: #0A2342;
+        }
+
+        /* Кнопки-статус (outline-light → белые) */
+        #filterCollapse .btn.btn-outline-light {
+            color: #0A2342;
+            border-color: #0A2342;
+            background-color: #fff;
+            margin: .15rem;
+        }
+
+        #filterCollapse .btn.btn-outline-light:hover,
+        #filterCollapse .btn.btn-outline-light:focus,
+        #filterCollapse input[type="radio"]:checked + .btn-outline-light {
+            background-color: #0A2342;
+            color: #fff;
+            border-color: #0A2342;
+        }
+
+        /* ─── Сами карточки ─────────────────────────────────────────────────────── */
+        .card.custom-card {
+            background-color: #e8eff5; /* слегка серо-голубой */
+            border: none;
+        }
+
+        .card.custom-card .card-body,
+        .card.custom-card .card-img-top {
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        /* ─── Ограничиваем картинки в карточках ───────────────────────────────── */
+        .card.custom-card .card-img-top {
+            width: 100%; /* ширина под размер контейнера */
+            max-height: 200px; /* «максимальная» высота превью */
+            object-fit: cover; /* обрезка/центровка по пропорциям */
+        }
+
+        /* ─── В модальном окне убираем это ограничение, чтобы показывать «полный» размер ───────────────────────────────── */
+        #detailModalImage {
+            max-height: none; /* отменяем ограничение */
+            object-fit: contain; /* показываем полностью по ширине/высоте */
+            width: 100%; /* разворачиваем под ширину модалки */
+        }
+
+	</style>
 {% endblock %}
 
 {% block content %}
-<div class="container my-4">
-  <h2 class="mb-3 text-white">Каталог IT-решений</h2>
+	<div class="container my-4">
+		<h2 class="mb-3 text-white">Каталог IT-решений</h2>
 
-  <form method="get" action="">
-    <div class="catalog-header">
-      <!-- Счетчик «Всего решений» -->
-      <div class="total-count">
-        Всего решений: <span id="totalCount">{{ page_content.solutions|length }}</span>
-      </div>
+		<form method="get" action="">
+			<div class="catalog-header">
+				<!-- Счетчик «Всего решений» -->
+				<div class="total-count">
+					Всего решений: <span id="totalCount">{{ page_content.solutions|length }}</span>
+				</div>
 
-      <!-- Поле поиска -->
-      <input
-        type="text"
-        name="q"
-        class="form-control search-input"
-        placeholder="Поиск решения…"
-        aria-label="Поиск"
-        value="{{ page_content.search_query }}"
-      >
+				<!-- Поле поиска -->
+				<input
+						type="text"
+						name="q"
+						class="form-control search-input"
+						placeholder="Поиск решения…"
+						aria-label="Поиск"
+						value="{{ page_content.search_query }}"
+				>
 
-      <!-- Кнопка «Фильтры» -->
-      <button
-        class="btn btn-outline-light btn-filters"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#filterCollapse"
-        aria-expanded="false"
-        aria-controls="filterCollapse"
-      >
-        Фильтры
-      </button>
-    </div>
+				<!-- Кнопка «Фильтры» -->
+				<button
+						class="btn btn-outline-light btn-filters"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="#filterCollapse"
+						aria-expanded="false"
+						aria-controls="filterCollapse"
+				>
+					Фильтры
+				</button>
+			</div>
 
-    <!-- Панель фильтров -->
-    <div class="collapse" id="filterCollapse">
-      <div class="row g-3">
-        <!-- Фильтрация по тегам -->
-        <div class="col-12 col-md-6">
-          <label class="form-label">Теги:</label>
-          <div class="d-flex flex-wrap">
-            {% for tag in page_content.tags %}
-              {% with tag_slug=tag.slug %}
-                <input
-                  type="checkbox"
-                  class="btn-check"
-                  name="tags"
-                  id="filterTag_{{ tag_slug }}"
-                  value="{{ tag_slug }}"
-                  autocomplete="off"
-                  {% if tag_slug in page_content.selected_tags %}checked{% endif %}
-                >
-                <label
-                  class="btn btn-outline-primary"
-                  for="filterTag_{{ tag_slug }}"
-                >
-                  {{ tag.name }}
-                </label>
-              {% endwith %}
-            {% empty %}
-              <span class="text-light">Нет доступных тегов</span>
-            {% endfor %}
-          </div>
-        </div>
+			<!-- Панель фильтров -->
+			<div class="collapse" id="filterCollapse">
+				<div class="row g-3">
+					<!-- Фильтрация по тегам -->
+					<div class="col-12 col-md-6">
+						<label class="form-label">Теги:</label>
+						<div class="d-flex flex-wrap">
+							{% for tag in page_content.tags %}
+								{% with tag_slug=tag.slug %}
+									<input
+											type="checkbox"
+											class="btn-check"
+											name="tags"
+											id="filterTag_{{ tag_slug }}"
+											value="{{ tag_slug }}"
+											autocomplete="off"
+											{% if tag_slug in page_content.selected_tags %}checked{% endif %}
+									>
+									<label
+											class="btn btn-outline-primary"
+											for="filterTag_{{ tag_slug }}"
+									>
+										{{ tag.name }}
+									</label>
+								{% endwith %}
+							{% empty %}
+								<span class="text-light">Нет доступных тегов</span>
+							{% endfor %}
+						</div>
+					</div>
 
-        <!-- Фильтрация по статусу -->
-        <div class="col-12 col-md-6">
-          <label class="form-label">Статус:</label>
-          <div class="status-group">
-            <input
-              type="radio"
-              class="btn-check"
-              name="status"
-              id="statusAll"
-              value="all"
-              autocomplete="off"
-              {% if page_content.selected_status == 'all' %}checked{% endif %}
-            >
-            <label class="btn btn-outline-light" for="statusAll">Все</label>
+					<!-- Фильтрация по статусу -->
+					<div class="col-12 col-md-6">
+						<label class="form-label">Статус:</label>
+						<div class="status-group">
+							<input
+									type="radio"
+									class="btn-check"
+									name="status"
+									id="statusAll"
+									value="all"
+									autocomplete="off"
+									{% if page_content.selected_status == 'all' %}checked{% endif %}
+							>
+							<label class="btn btn-outline-light" for="statusAll">Все</label>
 
-            <input
-              type="radio"
-              class="btn-check"
-              name="status"
-              id="statusStartup"
-              value="startup"
-              autocomplete="off"
-              {% if page_content.selected_status == 'startup' %}checked{% endif %}
-            >
-            <label class="btn btn-outline-light" for="statusStartup">Стартап</label>
+							<input
+									type="radio"
+									class="btn-check"
+									name="status"
+									id="statusStartup"
+									value="startup"
+									autocomplete="off"
+									{% if page_content.selected_status == 'startup' %}checked{% endif %}
+							>
+							<label class="btn btn-outline-light" for="statusStartup">Стартап</label>
 
-            <input
-              type="radio"
-              class="btn-check"
-              name="status"
-              id="statusProduct"
-              value="product"
-              autocomplete="off"
-              {% if page_content.selected_status == 'product' %}checked{% endif %}
-            >
-            <label class="btn btn-outline-light" for="statusProduct">Продукт</label>
-          </div>
-        </div>
+							<input
+									type="radio"
+									class="btn-check"
+									name="status"
+									id="statusProduct"
+									value="product"
+									autocomplete="off"
+									{% if page_content.selected_status == 'product' %}checked{% endif %}
+							>
+							<label class="btn btn-outline-light" for="statusProduct">Продукт</label>
+						</div>
+					</div>
 
-        <!-- Кнопка «Применить» -->
-        <div class="col-12 text-end">
-          <button type="submit" class="btn btn-primary">Применить</button>
-        </div>
-      </div>
-    </div>
-  </form>
+					<!-- Кнопка «Применить» -->
+					<div class="col-12 text-end">
+						<button type="submit" class="btn btn-primary">Применить</button>
+					</div>
+				</div>
+			</div>
+		</form>
 
-  <!-- Сетка карточек -->
-  <div class="row g-4 mt-3">
-    {% for sol in page_content.solutions %}
-      <div class="col-12 col-md-6 col-lg-4">
-        <div
-          class="card custom-card h-100 shadow-sm"
-          data-bs-toggle="modal"
-          data-bs-target="#detailModal"
-          data-bs-title="{{ sol.title }}"
-          data-bs-description="{{ sol.description }}"
-          data-bs-org="{{ sol.organization }}"
-          data-bs-phone="{{ sol.phone }}"
-          data-bs-email="{{ sol.email }}"
-          data-bs-site="{{ sol.site }}"
-          data-bs-imgurl="{% if sol.image %}{{ sol.image.url }}{% endif %}"
-        >
-          {% if sol.image %}
-            <img
-              src="{{ sol.image.url }}"
-              class="card-img-top"
-              alt="{{ sol.title }}"
-            >
-          {% endif %}
-          <div class="card-body">
-            <h5 class="card-title">{{ sol.title|truncatechars:45 }}</h5>
-            <p class="card-text">{{ sol.short_description|truncatechars:80 }}</p>
-          </div>
-        </div>
-      </div>
-    {% empty %}
-      <div class="col-12">
-        <p class="text-light">Решения не найдены.</p>
-      </div>
-    {% endfor %}
-  </div>
-</div>
+		<!-- Сетка карточек -->
+		<div class="row g-4 mt-3">
+			{% for sol in page_content.solutions %}
+				<div class="col-12 col-md-6 col-lg-4">
+					<div
+							class="card custom-card h-100 shadow-sm"
+							data-bs-toggle="modal"
+							data-bs-target="#detailModal"
+							data-bs-title="{{ sol.title }}"
+							data-bs-description="{{ sol.description }}"
+							data-bs-org="{{ sol.organization }}"
+							data-bs-phone="{{ sol.phone }}"
+							data-bs-email="{{ sol.email }}"
+							data-bs-site="{{ sol.site }}"
+							data-bs-imgurl="{% if sol.image %}{{ sol.image.url }}{% endif %}"
+					>
+						{% if sol.image %}
+							<img
+									src="{{ sol.image.url }}"
+									class="card-img-top"
+									alt="{{ sol.title }}"
+							>
+						{% endif %}
+						<div class="card-body">
+							<h5 class="card-title">{{ sol.title|truncatechars:45 }}</h5>
+							<p class="card-text">{{ sol.short_description|truncatechars:80 }}</p>
+						</div>
+					</div>
+				</div>
+			{% empty %}
+				<div class="col-12">
+					<p class="text-light">Решения не найдены.</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
 
-<!-- Модальное окно с деталями -->
-<div
-  class="modal fade"
-  id="detailModal"
-  tabindex="-1"
-  aria-labelledby="detailModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="detailModalLabel"></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-      </div>
-      <div class="modal-body">
-        <img id="detailModalImage" src="" alt="Изображение" class="img-fluid mb-3">
-        <p id="detailModalDescription"></p>
-        <hr>
-        <h6 class="fw-bold">Организация и контакты</h6>
-        <p class="mb-1"><strong>Организация:</strong> <span id="detailModalOrg"></span></p>
-        <p class="mb-1"><strong>Телефон:</strong> <span id="detailModalPhone"></span></p>
-        <p class="mb-1"><strong>Почта:</strong> <span id="detailModalEmail"></span></p>
-        <p><strong>Сайт:</strong> <a id="detailModalSite" href="#" target="_blank"></a></p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<!-- Модальное окно с деталями -->
+	<div
+			class="modal fade"
+			id="detailModal"
+			tabindex="-1"
+			aria-labelledby="detailModalLabel"
+			aria-hidden="true"
+	>
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="detailModalLabel"></h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"
+					        aria-label="Закрыть"></button>
+				</div>
+				<div class="modal-body">
+					<img id="detailModalImage" src="" alt="Изображение" class="img-fluid mb-3">
+					<p id="detailModalDescription"></p>
+					<hr>
+					<h6 class="fw-bold">Организация и контакты</h6>
+					<p class="mb-1"><strong>Организация:</strong> <span id="detailModalOrg"></span>
+					</p>
+					<p class="mb-1"><strong>Телефон:</strong> <span id="detailModalPhone"></span>
+					</p>
+					<p class="mb-1"><strong>Почта:</strong> <span id="detailModalEmail"></span></p>
+					<p><strong>Сайт:</strong> <a id="detailModalSite" href="#" target="_blank"></a>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+						Закрыть
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
-<script>
-  const detailModal = document.getElementById('detailModal');
-  detailModal.addEventListener('show.bs.modal', event => {
-    const card = event.relatedTarget;
-    detailModal.querySelector('#detailModalLabel').textContent = card.getAttribute('data-bs-title');
-    detailModal.querySelector('#detailModalImage').src = card.getAttribute('data-bs-imgurl');
-    detailModal.querySelector('#detailModalDescription').textContent = card.getAttribute('data-bs-description');
-    detailModal.querySelector('#detailModalOrg').textContent = card.getAttribute('data-bs-org');
-    detailModal.querySelector('#detailModalPhone').textContent = card.getAttribute('data-bs-phone');
-    detailModal.querySelector('#detailModalEmail').textContent = card.getAttribute('data-bs-email');
-    const siteEl = detailModal.querySelector('#detailModalSite');
-    siteEl.textContent = card.getAttribute('data-bs-site');
-    siteEl.href = card.getAttribute('data-bs-site');
-  });
-</script>
+	<script>
+        const detailModal = document.getElementById('detailModal');
+        detailModal.addEventListener('show.bs.modal', event => {
+            const card = event.relatedTarget;
+            detailModal.querySelector('#detailModalLabel').textContent = card.getAttribute('data-bs-title');
+            detailModal.querySelector('#detailModalImage').src = card.getAttribute('data-bs-imgurl');
+            detailModal.querySelector('#detailModalDescription').textContent = card.getAttribute('data-bs-description');
+            detailModal.querySelector('#detailModalOrg').textContent = card.getAttribute('data-bs-org');
+            detailModal.querySelector('#detailModalPhone').textContent = card.getAttribute('data-bs-phone');
+            detailModal.querySelector('#detailModalEmail').textContent = card.getAttribute('data-bs-email');
+            const siteEl = detailModal.querySelector('#detailModalSite');
+            siteEl.textContent = card.getAttribute('data-bs-site');
+            siteEl.href = card.getAttribute('data-bs-site');
+        });
+	</script>
 {% endblock %}
