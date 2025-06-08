@@ -28,6 +28,8 @@ DEBUG = os.getenv("DEBUG", "0") == "1"
 
 ALLOWED_HOSTS = ["*"]
 
+AUTH_USER_MODEL = 'main.CustomUser'
+
 # Application definition
 
 INSTALLED_APPS = [
