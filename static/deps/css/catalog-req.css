@@ -1,0 +1,27 @@
+.catalog-header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .total-count {
+    background-color: #0A2342;
+    color: #fff;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .search-input {
+    flex: 1;
+    min-width: 200px;
+  }
+  .card.custom-card {
+    background-color: #e8eff5;
+    border: none;
+    cursor: pointer;
+  }
+  .card.custom-card .card-body {
+    border-radius: 0 0 .5rem .5rem;
+  }

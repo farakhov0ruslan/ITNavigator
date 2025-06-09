@@ -2,45 +2,27 @@
 {% load static %}
 
 {% block title %}Запросы на ИТ-решения{% endblock %}
-
 {% block head %}
-<style>
-  .catalog-header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-  .total-count {
-    background-color: #0A2342;
-    color: #fff;
-    padding: .5rem 1rem;
-    border-radius: 1rem;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  .search-input {
-    flex: 1;
-    min-width: 200px;
-  }
-  .card.custom-card {
-    background-color: #e8eff5;
-    border: none;
-    cursor: pointer;
-  }
-  .card.custom-card .card-body {
-    border-radius: 0 0 .5rem .5rem;
-  }
-</style>
+	<link rel="stylesheet" href="{% static 'deps/css/catalog-req.css' %}">
 {% endblock %}
 
 {% block content %}
+
+
 <div class="container my-4">
   <h2 class="mb-2 text-white">Запросы на ИТ-решения</h2>
   <p class="text-light mb-4">
     Здесь вы можете оставить запрос на поиск ИТ-решения, либо предложить своё решение на открытый запрос.
   </p>
+
+  <!-- Новая кнопка создания -->
+  <div class="mb-4">
+{#    <a href="{% url 'catalog:request_create' %}"#}
+       <a href="#"
+       class="btn btn-primary">
+      + Создать запрос на IT-решение
+    </a>
+  </div>
 
   <form method="get" action="">
     <div class="catalog-header">
@@ -79,6 +61,13 @@
           <div class="card-body">
             <h5 class="card-title">{{ req.title|truncatechars:45 }}</h5>
             <p class="card-text">{{ req.short_description|truncatechars:80 }}</p>
+            {% if req.tags.all %}
+              <div class="mt-3">
+                {% for tag in req.tags.all %}
+                  <span class="badge bg-secondary">{{ tag.name }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>
