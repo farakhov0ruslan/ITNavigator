@@ -3,134 +3,24 @@
 
 {% block title %}Каталог IT-решений{% endblock %}
 
+
+
 {% block head %}
-	<style>
-        /* ─── Шапка: поиск + счётчик + кнопка Фильтры ───────────────────────────── */
-        .catalog-header {
-            padding: 1rem;
-            border-radius: .5rem;
-            display: flex;
-            align-items: center;
-        }
+	<link rel="stylesheet" href="{% static 'deps/css/catalog-sol.css' %}">
 
-        /* «Всего решений» – синее фоновое кольцо с закруглением */
-        .total-count {
-            background-color: #0A2342FF;
-            color: #fff;
-            padding: .5rem 1rem;
-            border-radius: 1rem;
-            font-size: 1.1rem;
-            font-weight: 500;
-            white-space: nowrap;
-            margin-right: 1rem;
-        }
-
-        /* Поле поиска растягивается между счётчиком и кнопкой Фильтры */
-        .search-input {
-            flex-grow: 1;
-            max-width: none;
-            margin-right: 1rem;
-        }
-
-        .search-input::placeholder {
-            color: #ddd;
-        }
-
-        .search-input,
-        .search-input:focus {
-            background-color: #fff;
-            color: #000;
-            border: 1px solid #ccc;
-        }
-
-        /* Кнопка «Фильтры» */
-        .btn-filters {
-            white-space: nowrap;
-        }
-
-        /* ─── Панель фильтров ───────────────────────────────────────────────────── */
-        #filterCollapse {
-            margin-top: .5rem;
-        }
-
-        /* Метки «Теги» и «Статус» – белые */
-        #filterCollapse .form-label {
-            color: #fff;
-            display: block;
-        }
-
-        /* Чтобы статусовые кнопки выровнять сверху, а не по центру */
-        #filterCollapse .status-group {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            gap: .25rem;
-        }
-
-        /* Кнопки-теги (outline-primary синий текст) */
-        #filterCollapse .btn.btn-outline-primary {
-            color: #0A2342;
-            border-color: #0A2342;
-            background-color: #fff;
-            margin: .15rem;
-        }
-
-        #filterCollapse .btn.btn-outline-primary:hover,
-        #filterCollapse .btn.btn-outline-primary:focus,
-        #filterCollapse input[type="checkbox"]:checked + .btn-outline-primary {
-            background-color: #0A2342;
-            color: #fff;
-            border-color: #0A2342;
-        }
-
-        /* Кнопки-статус (outline-light → белые) */
-        #filterCollapse .btn.btn-outline-light {
-            color: #0A2342;
-            border-color: #0A2342;
-            background-color: #fff;
-            margin: .15rem;
-        }
-
-        #filterCollapse .btn.btn-outline-light:hover,
-        #filterCollapse .btn.btn-outline-light:focus,
-        #filterCollapse input[type="radio"]:checked + .btn-outline-light {
-            background-color: #0A2342;
-            color: #fff;
-            border-color: #0A2342;
-        }
-
-        /* ─── Сами карточки ─────────────────────────────────────────────────────── */
-        .card.custom-card {
-            background-color: #e8eff5; /* слегка серо-голубой */
-            border: none;
-        }
-
-        .card.custom-card .card-body,
-        .card.custom-card .card-img-top {
-            border-radius: 0.5rem 0.5rem 0 0;
-        }
-
-        /* ─── Ограничиваем картинки в карточках ───────────────────────────────── */
-        .card.custom-card .card-img-top {
-            width: 100%; /* ширина под размер контейнера */
-            max-height: 200px; /* «максимальная» высота превью */
-            object-fit: cover; /* обрезка/центровка по пропорциям */
-        }
-
-        /* ─── В модальном окне убираем это ограничение, чтобы показывать «полный» размер ───────────────────────────────── */
-        #detailModalImage {
-            max-height: none; /* отменяем ограничение */
-            object-fit: contain; /* показываем полностью по ширине/высоте */
-            width: 100%; /* разворачиваем под ширину модалки */
-        }
-
-	</style>
 {% endblock %}
 
 {% block content %}
 	<div class="container my-4">
 		<h2 class="mb-3 text-white">Каталог IT-решений</h2>
 
+		<a href="{% url "catalog:requests" %}" class="btn btn-light rounded-pill px-4 py-2">
+			Запросы на IT-решения
+		</a>
+
+		<a href="#" class="btn btn-light rounded-pill px-4 py-2">
+			+ Предложить IT-решение
+		</a>
 		<form method="get" action="">
 			<div class="catalog-header">
 				<!-- Счетчик «Всего решений» -->
