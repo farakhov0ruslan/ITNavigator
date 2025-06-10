@@ -16,4 +16,16 @@ urlpatterns = [
         views.requests,
         name="requests",
     ),
+
+    path(
+        "solutions/create/",
+        views.solution_create,
+        name="solution_create",
+    ),
+
+    path(
+        "requests/create/",
+        views.request_create,
+        name="request_create",
+    ),
 ]

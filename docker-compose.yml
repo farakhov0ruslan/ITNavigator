@@ -19,8 +19,11 @@ services:
       context: .
     container_name: itnavigator-web
     command: >
-      sh -c "python manage.py migrate --noinput &&
-             python manage.py runserver 0.0.0.0:8000"
+      sh -c "
+        python manage.py migrate --noinput &&
+        python manage.py loaddata data.json &&
+        python manage.py runserver 0.0.0.0:8000
+      "
     volumes:
       - .:/app
     ports:
