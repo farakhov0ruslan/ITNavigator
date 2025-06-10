@@ -1,0 +1,1612 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2025-06-09T10:20:28.145Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "10",
+      "object_repr": "Автономная система охраны строительных площадок",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2025-06-09T10:20:46.212Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "9",
+      "object_repr": "Платформа для онлайн-бронирования отелей",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2025-06-09T10:20:50.093Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "8",
+      "object_repr": "Умный биллинг для спортивных объектов",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2025-06-09T10:20:53.967Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "7",
+      "object_repr": "Маркетплейс для фермерских продуктов",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2025-06-09T10:20:58.300Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "5",
+      "object_repr": "Интеллектуальный контроль качества продукции",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2025-06-09T10:21:03.347Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "4",
+      "object_repr": "Электронная платформа дистанционного образования",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2025-06-09T10:21:07.281Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "Платформа телемедицины для удалённых районов",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2025-06-09T10:21:11.318Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "Умная система управления посевами",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2025-06-09T10:21:23.905Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "6",
+      "object_repr": "Мобильное приложение для управления ЖКХ",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2025-06-09T10:21:30.182Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "Автоматизированная система мониторинга нефтепроводов",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2025-06-09T11:06:45.960Z",
+      "user": 2,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "Мобильное приложение для туристов — Одобрено",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2025-06-09T11:20:29.066Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "15",
+      "object_repr": "HealthConnect",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435/\\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2025-06-09T11:21:08.720Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "FinAnalytics",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435/\\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2025-06-09T11:21:16.791Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "FinAnalytics",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2025-06-09T11:21:34.207Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "14",
+      "object_repr": "FinAnalytics",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2025-06-09T11:21:43.641Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "12",
+      "object_repr": "EduPlatform",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435/\\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2025-06-09T11:22:12.443Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "11",
+      "object_repr": "EcoTracker",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0418\\u0437\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u0438\\u0435/\\u043b\\u043e\\u0433\\u043e\\u0442\\u0438\\u043f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2025-06-09T23:44:51.081Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "f",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2025-06-09T23:45:31.827Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "f",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2025-06-10T01:04:18.055Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "h",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2025-06-10T01:04:25.574Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "hgghgh",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2025-06-10T01:04:29.615Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "hgghgh",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2025-06-10T01:08:00.869Z",
+      "user": 2,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "пп — Одобрено",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2025-06-10T01:08:09.581Z",
+      "user": 2,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "пп — Отклонено",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441 \\u043c\\u043e\\u0434\\u0435\\u0440\\u0430\\u0446\\u0438\\u0438\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2025-06-10T01:08:27.408Z",
+      "user": 2,
+      "content_type": 9,
+      "object_id": "7",
+      "object_repr": "пп — Отклонено",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+      "action_time": "2025-06-10T01:08:27.408Z",
+      "user": 2,
+      "content_type": 9,
+      "object_id": "6",
+      "object_repr": "jj — В обработке",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+      "action_time": "2025-06-10T01:10:38.023Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "18",
+      "object_repr": "h",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+      "action_time": "2025-06-10T01:10:38.024Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "17",
+      "object_repr": "hgghgh",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+      "action_time": "2025-06-10T01:10:38.024Z",
+      "user": 2,
+      "content_type": 8,
+      "object_id": "16",
+      "object_repr": "f",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+      "action_time": "2025-06-10T02:46:38.506Z",
+      "user": 2,
+      "content_type": 6,
+      "object_id": "6",
+      "object_repr": "admin@gmail.com (Компания)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+      "action_time": "2025-06-10T02:47:48.947Z",
+      "user": 2,
+      "content_type": 6,
+      "object_id": "3",
+      "object_repr": "contact@stroysecure.ru (Компания)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+      "action_time": "2025-06-10T02:47:48.947Z",
+      "user": 2,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "farakhov0ruslan@gmail.com (Компания)",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+      "action_time": "2025-06-10T02:48:10.225Z",
+      "user": 2,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "super@edu.ru (Компания)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u0422\\u0438\\u043f \\u043f\\u0440\\u043e\\u0444\\u0438\\u043b\\u044f\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+      "action_time": "2025-06-10T02:48:18.387Z",
+      "user": 2,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "super@edu.ru (Компания)",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Username\"]}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 6,
+      "codename": "add_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 6,
+      "codename": "change_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 6,
+      "codename": "delete_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 6,
+      "codename": "view_customuser"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add Тег",
+      "content_type": 7,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change Тег",
+      "content_type": 7,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete Тег",
+      "content_type": 7,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view Тег",
+      "content_type": 7,
+      "codename": "view_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add IT-решение",
+      "content_type": 8,
+      "codename": "add_itsolution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change IT-решение",
+      "content_type": 8,
+      "codename": "change_itsolution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete IT-решение",
+      "content_type": 8,
+      "codename": "delete_itsolution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view IT-решение",
+      "content_type": 8,
+      "codename": "view_itsolution"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add Запрос на решение",
+      "content_type": 9,
+      "codename": "add_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change Запрос на решение",
+      "content_type": 9,
+      "codename": "change_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete Запрос на решение",
+      "content_type": 9,
+      "codename": "delete_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view Запрос на решение",
+      "content_type": 9,
+      "codename": "view_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add Запрос на ИТ-решение",
+      "content_type": 10,
+      "codename": "add_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change Запрос на ИТ-решение",
+      "content_type": 10,
+      "codename": "change_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete Запрос на ИТ-решение",
+      "content_type": 10,
+      "codename": "delete_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view Запрос на ИТ-решение",
+      "content_type": 10,
+      "codename": "view_itrequest"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add Запрос на ИТ-решение",
+      "content_type": 11,
+      "codename": "add_itoffer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change Запрос на ИТ-решение",
+      "content_type": 11,
+      "codename": "change_itoffer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete Запрос на ИТ-решение",
+      "content_type": 11,
+      "codename": "delete_itoffer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view Запрос на ИТ-решение",
+      "content_type": 11,
+      "codename": "view_itoffer"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "main",
+      "model": "customuser"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "catalog",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "catalog",
+      "model": "itsolution"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "catalog",
+      "model": "itrequest"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "solutions",
+      "model": "itrequest"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "offers",
+      "model": "itoffer"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "gfgkigiwan5yhbtiw61x9ciparbsi6y1",
+    "fields": {
+      "session_data": ".eJxVjEEOgyAQRe8y64YIDIguu-8ZyABDtTWSCK6a3r01ceP2v_f-B7ayN65-4dxglDfwtLfJ75U3PycYQcFlCxTfvB4gvWh9FhHL2rY5iEMRJ63iURIv99O9HExUp38tbeeskT1lRA5OY9QkTd-hMy4xhmiCNtEMOg5dso6URFSZrUKXh9AzfH-jgDym:1uOnPH:3JGf2KJ0x7JFveu4pD4VIKqjwVJmQSrsTuRgMaVir0o",
+      "expire_date": "2025-06-24T01:04:03.156Z"
+    }
+  },
+  {
+    "model": "main.customuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$zPW30sVknxbZNhCrnfGcrg$2sB2+DsuKMhrceMxrVFNQFbwU4KfIzjxCLTs19SOmh8=",
+      "last_login": "2025-06-10T01:04:03Z",
+      "is_superuser": true,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-06-09T09:53:28Z",
+      "email": "super@edu.ru",
+      "username": "super",
+      "profile_type": "company",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "main.customuser",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$F2XR5ygvZNh5wB00xiZOdw$vbSyaeNdJs/yCFS0bZH6I/MnzA2GI8RDLYTZIuaDK7E=",
+      "last_login": "2025-06-10T00:49:15.554Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-06-10T00:38:04.547Z",
+      "email": "company2@gmail.com",
+      "username": "Company2",
+      "profile_type": "company",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "main.customuser",
+    "pk": 5,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$5nB00AqOwE6EvFmCiaMTvz$x+9OOM4evx9H4cyTtuRTtHaHQ7wjeBrolHWSaLTzN2s=",
+      "last_login": "2025-06-10T01:03:22.121Z",
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-06-10T00:51:00.271Z",
+      "email": "init@gmail.com",
+      "username": "init",
+      "profile_type": "initiator",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "main.customuser",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$bttsvJchdzskzGy7JPuVIA$OchPxYhLUX1mHaENvr7vIBY39yT1vckypUD903rrEns=",
+      "last_login": null,
+      "is_superuser": false,
+      "first_name": "",
+      "last_name": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-06-10T02:46:38.165Z",
+      "email": "admin@gmail.com",
+      "username": "admin",
+      "profile_type": "company",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 1,
+    "fields": {
+      "name": "АПК",
+      "slug": "апк"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 2,
+    "fields": {
+      "name": "Безопасность",
+      "slug": "безопасность"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 3,
+    "fields": {
+      "name": "Здравоохранение",
+      "slug": "здравоохранение"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 4,
+    "fields": {
+      "name": "Нефть и газ",
+      "slug": "нефть-и-газ"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 5,
+    "fields": {
+      "name": "Образование",
+      "slug": "образование"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 6,
+    "fields": {
+      "name": "Промышленность",
+      "slug": "промышленность"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 7,
+    "fields": {
+      "name": "Связь и коммуникации",
+      "slug": "связь-и-коммуникации"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 8,
+    "fields": {
+      "name": "Социальная сфера",
+      "slug": "социальная-сфера"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 9,
+    "fields": {
+      "name": "Спорт",
+      "slug": "спорт"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 10,
+    "fields": {
+      "name": "Строительство и ЖКХ",
+      "slug": "строительство-и-жкх"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 11,
+    "fields": {
+      "name": "Торговля",
+      "slug": "торговля"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 12,
+    "fields": {
+      "name": "Транспорт",
+      "slug": "транспорт"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 13,
+    "fields": {
+      "name": "Туризм и отдых",
+      "slug": "туризм-и-отдых"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 14,
+    "fields": {
+      "name": "Финансы",
+      "slug": "финансы"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 15,
+    "fields": {
+      "name": "Цифровизация бизнеса",
+      "slug": "цифровизация-бизнеса"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 16,
+    "fields": {
+      "name": "Экология",
+      "slug": "экология"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 17,
+    "fields": {
+      "name": "Туризм",
+      "slug": "туризм"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 18,
+    "fields": {
+      "name": "ИТ",
+      "slug": "ит"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 19,
+    "fields": {
+      "name": "Стартап",
+      "slug": "стартап"
+    }
+  },
+  {
+    "model": "catalog.tag",
+    "pk": 20,
+    "fields": {
+      "name": "Продукт",
+      "slug": "продукт"
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 1,
+    "fields": {
+      "status": "product",
+      "moderation_status": "approved",
+      "title": "Умная система управления посевами",
+      "short_description": "Датчики и аналитика для оптимизации урожайности.",
+      "description": "Полное описание: Решение включает IoT-датчики влажности, температуры, спутниковый мониторинг и AI-аналитику для подбора оптимальных сроков посева, удобрений и полива. Интерфейс веб и мобильное приложение.",
+      "organization": "ООО «АгроАйТи»",
+      "phone": "+7 123 456-78-90",
+      "email": "info@agroiti.ru",
+      "site": "https://agroiti.ru",
+      "image": "itsolutions/2025/06/06/ug8g14q4ftdo0zc6nvdi8dbfnnoradeh.jpg",
+      "created_at": "2025-06-06T13:28:48.055Z",
+      "updated_at": "2025-06-09T10:21:11.314Z",
+      "tags": [
+        1,
+        15,
+        16
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 2,
+    "fields": {
+      "status": "startup",
+      "moderation_status": "approved",
+      "title": "Платформа телемедицины для удалённых районов",
+      "short_description": "Видеоконсультации и анализ показателей здоровья.",
+      "description": "Полное описание: Онлайн-консультации с врачами, интеграция с умными носимыми устройствами, автоматическое распознавание экстренных случаев, хранение истории заболеваний.",
+      "organization": "ООО «МедТелеком»",
+      "phone": "+7 800 200-30-40",
+      "email": "support@medtelecom.ru",
+      "site": "https://medtelecom.ru",
+      "image": "itsolutions/2025/06/06/images_1.jpeg",
+      "created_at": "2025-06-06T13:28:48.061Z",
+      "updated_at": "2025-06-09T10:21:07.278Z",
+      "tags": [
+        3,
+        7,
+        8
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 3,
+    "fields": {
+      "status": "product",
+      "moderation_status": "approved",
+      "title": "Автоматизированная система мониторинга нефтепроводов",
+      "short_description": "Дроны и датчики для выявления утечек.",
+      "description": "Полное описание: Решение сочетает дроны с тепловизорами, сенсоры давления, AI-анализ изображений, чтобы в реальном времени обнаружить утечки, исключить простои и минимизировать экологический ущерб.",
+      "organization": "АО «НефтеКонтроль»",
+      "phone": "+7 495 987-65-43",
+      "email": "contact@neftecontrol.ru",
+      "site": "https://neftecontrol.ru",
+      "image": "itsolutions/2025/06/06/Shema-skada-ng-.jpg",
+      "created_at": "2025-06-06T13:28:48.063Z",
+      "updated_at": "2025-06-09T10:21:30.179Z",
+      "tags": [
+        2,
+        4,
+        16
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 4,
+    "fields": {
+      "status": "startup",
+      "moderation_status": "approved",
+      "title": "Электронная платформа дистанционного образования",
+      "short_description": "Курсы, тесты и вебинары для школьников и студентов.",
+      "description": "Полное описание: Платформа поддерживает видеолекции, интерактивные задания, онлайн-экзамены, геймификацию и аналитику успеваемости, интегрируется с LMS.",
+      "organization": "ООО «ЭдСофт»",
+      "phone": "+7 999 111-22-33",
+      "email": "edu@edsoft.ru",
+      "site": "https://edsoft.ru",
+      "image": "itsolutions/2025/06/06/12ac53c7bf5498f35b2f135a7a33c846.jpg",
+      "created_at": "2025-06-06T13:28:48.065Z",
+      "updated_at": "2025-06-09T10:21:03.345Z",
+      "tags": [
+        5,
+        8,
+        15
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 5,
+    "fields": {
+      "status": "product",
+      "moderation_status": "approved",
+      "title": "Интеллектуальный контроль качества продукции",
+      "short_description": "Камеры и ML-анализ для контроля брака на конвейере.",
+      "description": "Полное описание: Система использует компьютерное зрение и алгоритмы машинного обучения для выявления бракованных изделий в реальном времени, уведомляет операторов и формирует отчёты.",
+      "organization": "ООО «ПромЛидер»",
+      "phone": "+7 812 222-33-44",
+      "email": "qa@promleader.ru",
+      "site": "https://promleader.ru",
+      "image": "itsolutions/2025/06/06/ris_0_www.fool.com_gettyimages-1387900612_1.webp",
+      "created_at": "2025-06-06T13:28:48.068Z",
+      "updated_at": "2025-06-09T10:20:58.297Z",
+      "tags": [
+        2,
+        6,
+        15
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 6,
+    "fields": {
+      "status": "startup",
+      "moderation_status": "approved",
+      "title": "Мобильное приложение для управления ЖКХ",
+      "short_description": "Оплата коммунальных услуг, заявки в диспетчерскую, отзывы.",
+      "description": "Полное описание: Удобный мобильный клиент позволяет жителям подавать заявки на ремонт, оплачивать счета, получать уведомления о статусе заявки, просматривать новости дома и общаться с управляющей компанией.",
+      "organization": "ООО «ЖКХ Софт»",
+      "phone": "+7 495 222-11-00",
+      "email": "support@zhkhsoft.ru",
+      "site": "https://zhkhsoft.ru",
+      "image": "itsolutions/2025/06/06/phone3.png",
+      "created_at": "2025-06-06T13:28:48.070Z",
+      "updated_at": "2025-06-09T10:21:23.903Z",
+      "tags": [
+        8,
+        10,
+        15
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 7,
+    "fields": {
+      "status": "product",
+      "moderation_status": "approved",
+      "title": "Маркетплейс для фермерских продуктов",
+      "short_description": "Платформа для продажи натуральных продуктов напрямую от фермера.",
+      "description": "Полное описание: Онлайн-магазин с доставкой, отзывы пользователей, система рейтингов, интеграция с платёжными системами и трекингом курьеров.",
+      "organization": "ООО «АгроМаркет»",
+      "phone": "+7 123 654-78-90",
+      "email": "info@agromarket.ru",
+      "site": "https://agromarket.ru",
+      "image": "itsolutions/2025/06/06/0477f2b174213b92ccdf9357f93c8e030cccc13ad1ab9665507b637ee5194467.jpg",
+      "created_at": "2025-06-06T13:28:48.072Z",
+      "updated_at": "2025-06-09T10:20:53.965Z",
+      "tags": [
+        1,
+        11,
+        12
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 8,
+    "fields": {
+      "status": "startup",
+      "moderation_status": "approved",
+      "title": "Умный биллинг для спортивных объектов",
+      "short_description": "Автоматизация продажи билетов и расписания спортивных мероприятий.",
+      "description": "Полное описание: Система управления продажей билетов, онлайн-бронь, интеграция с CRM клубов, аналитика посещаемости и персонализированные уведомления.",
+      "organization": "ООО «СпортТех»",
+      "phone": "+7 495 777-77-77",
+      "email": "sales@sporttech.ru",
+      "site": "https://sporttech.ru",
+      "image": "itsolutions/2025/06/06/billingmob.jpg",
+      "created_at": "2025-06-06T13:28:48.074Z",
+      "updated_at": "2025-06-09T10:20:50.091Z",
+      "tags": [
+        9,
+        12,
+        15
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 9,
+    "fields": {
+      "status": "product",
+      "moderation_status": "approved",
+      "title": "Платформа для онлайн-бронирования отелей",
+      "short_description": "Поиск, сравнение цен и бронирование номеров.",
+      "description": "Полное описание: Метапоиск, интеграция с PMS отелей, система отзывов, мобильное приложение и поддержка нескольких валют.",
+      "organization": "ООО «ОтельПро»",
+      "phone": "+7 800 300-20-10",
+      "email": "booking@otelpro.ru",
+      "site": "https://otelpro.ru",
+      "image": "itsolutions/2025/06/06/online-booking-traveling-plane-flight-concept-min.jpg",
+      "created_at": "2025-06-06T13:28:48.077Z",
+      "updated_at": "2025-06-09T10:20:46.210Z",
+      "tags": [
+        7,
+        13,
+        14
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 10,
+    "fields": {
+      "status": "startup",
+      "moderation_status": "approved",
+      "title": "Автономная система охраны строительных площадок",
+      "short_description": "Сенсоры движения, камеры и аналитика на AI.",
+      "description": "Полное описание: Решение включает беспроводные датчики движения, ночное видение, обработку в облаке, уведомления охране и интеграцию с системами безопасности объекта.",
+      "organization": "ООО «СтройБезопасность»",
+      "phone": "+7 495 333-22-11",
+      "email": "contact@stroysecure.ru",
+      "site": "https://stroysecure.ru",
+      "image": "itsolutions/2025/06/06/home-security-isometric-flowchart-1284-21954.jpg",
+      "created_at": "2025-06-06T13:28:48.079Z",
+      "updated_at": "2025-06-09T10:20:28.143Z",
+      "tags": [
+        2,
+        10,
+        15
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 11,
+    "fields": {
+      "status": "startup",
+      "moderation_status": "approved",
+      "title": "EcoTracker",
+      "short_description": "Система мониторинга экологических показателей",
+      "description": "Полное описание EcoTracker: сбор данных с датчиков, дашборды, уведомления.",
+      "organization": "ООО Экософт",
+      "phone": "8-800-123-45-67",
+      "email": "info@ecosoft.ru",
+      "site": "https://ecosoft.ru",
+      "image": "itsolutions/2025/06/09/02_23_18_364_2.png",
+      "created_at": "2025-06-09T11:00:38.438Z",
+      "updated_at": "2025-06-09T11:22:12.440Z",
+      "tags": [
+        18,
+        16
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 12,
+    "fields": {
+      "status": "product",
+      "moderation_status": "approved",
+      "title": "EduPlatform",
+      "short_description": "Платформа для онлайн-обучения",
+      "description": "Полное описание EduPlatform: видеокурсы, тесты, вебинары.",
+      "organization": "ООО EdTech",
+      "phone": "+7 495 234-56-78",
+      "email": "support@edtech.ru",
+      "site": "https://edtech.ru",
+      "image": "itsolutions/2025/06/09/img_1_1AgBxP0.png",
+      "created_at": "2025-06-09T11:00:38.443Z",
+      "updated_at": "2025-06-09T11:21:43.638Z",
+      "tags": [
+        5,
+        20
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 13,
+    "fields": {
+      "status": "startup",
+      "moderation_status": "pending",
+      "title": "TourGuide",
+      "short_description": "Приложение для туристических гидов",
+      "description": "Полное описание TourGuide: маршруты, карта офлайн, голосовой гид.",
+      "organization": "ЗАО ТурСофт",
+      "phone": "+7 111 222-33-44",
+      "email": "contact@toursoft.ru",
+      "site": "https://toursoft.ru",
+      "image": "",
+      "created_at": "2025-06-09T11:00:38.447Z",
+      "updated_at": "2025-06-09T11:00:38.447Z",
+      "tags": [
+        19,
+        17
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 14,
+    "fields": {
+      "status": "product",
+      "moderation_status": "pending",
+      "title": "FinAnalytics",
+      "short_description": "Сервис финансовой аналитики",
+      "description": "Полное описание FinAnalytics: отчёты, прогнозы, визуализация.",
+      "organization": "ООО ФинАналитика",
+      "phone": "+7 922 333-44-55",
+      "email": "sales@finanalytics.ru",
+      "site": "https://finanalytics.ru",
+      "image": "itsolutions/2025/06/09/img_1.png",
+      "created_at": "2025-06-09T11:00:38.449Z",
+      "updated_at": "2025-06-09T11:21:34.205Z",
+      "tags": [
+        20,
+        14
+      ]
+    }
+  },
+  {
+    "model": "catalog.itsolution",
+    "pk": 15,
+    "fields": {
+      "status": "product",
+      "moderation_status": "approved",
+      "title": "HealthConnect",
+      "short_description": "Портал для пациентов и медицинских учреждений",
+      "description": "Полное описание HealthConnect: запись онлайн, история болезни, телемедицина.",
+      "organization": "ООО МедСофт",
+      "phone": "+7 800 555-66-77",
+      "email": "info@medsoft.ru",
+      "site": "https://medsoft.ru",
+      "image": "itsolutions/2025/06/09/slide2.png",
+      "created_at": "2025-06-09T11:00:38.453Z",
+      "updated_at": "2025-06-09T11:20:29.063Z",
+      "tags": [
+        3,
+        18
+      ]
+    }
+  },
+  {
+    "model": "catalog.itrequest",
+    "pk": 1,
+    "fields": {
+      "title": "Информационная система учёта выбросов",
+      "short_description": "Требуется решение для мониторинга выбросов на предприятии.",
+      "contact_name": "Иванов Иван",
+      "company_name": "ООО Завод",
+      "inn": "1234567890",
+      "phone": "+7 495 987-65-43",
+      "email": "ivanov@zavod.ru",
+      "moderation_status": "approved",
+      "created_at": "2025-06-09T11:00:38.459Z",
+      "updated_at": "2025-06-09T11:00:38.459Z",
+      "tags": [
+        18,
+        16
+      ]
+    }
+  },
+  {
+    "model": "catalog.itrequest",
+    "pk": 2,
+    "fields": {
+      "title": "Платформа дистанционного обучения",
+      "short_description": "Нужна онлайн-платформа для корпоративного обучения.",
+      "contact_name": "Петров Пётр",
+      "company_name": "ООО КорпОбуч",
+      "inn": "0987654321",
+      "phone": "+7 999 888-77-66",
+      "email": "petrov@corpobuch.ru",
+      "moderation_status": "approved",
+      "created_at": "2025-06-09T11:00:38.466Z",
+      "updated_at": "2025-06-09T11:00:38.466Z",
+      "tags": [
+        5,
+        20
+      ]
+    }
+  },
+  {
+    "model": "catalog.itrequest",
+    "pk": 3,
+    "fields": {
+      "title": "Мобильное приложение для туристов",
+      "short_description": "Требуется приложение с маршрутами и гидом.",
+      "contact_name": "Сидоров Сидор",
+      "company_name": "ИП Сидоров",
+      "inn": "1122334455",
+      "phone": "+7 777 666-55-44",
+      "email": "sidorov@tourism.ru",
+      "moderation_status": "approved",
+      "created_at": "2025-06-09T11:00:38.470Z",
+      "updated_at": "2025-06-09T11:06:45.958Z",
+      "tags": [
+        19,
+        17
+      ]
+    }
+  },
+  {
+    "model": "catalog.itrequest",
+    "pk": 4,
+    "fields": {
+      "title": "Система управления запасами",
+      "short_description": "Нужен модуль для управления складскими запасами.",
+      "contact_name": "Кузнецова Ольга",
+      "company_name": "ООО СкладТех",
+      "inn": "2233445566",
+      "phone": "+7 555 444-33-22",
+      "email": "olga@skladtech.ru",
+      "moderation_status": "approved",
+      "created_at": "2025-06-09T11:00:38.473Z",
+      "updated_at": "2025-06-09T11:00:38.473Z",
+      "tags": [
+        20,
+        6
+      ]
+    }
+  },
+  {
+    "model": "catalog.itrequest",
+    "pk": 5,
+    "fields": {
+      "title": "Сервис поддержки пациентов",
+      "short_description": "Запрашиваем сервис для записи к врачу и истории болезней.",
+      "contact_name": "Михайлов Михаил",
+      "company_name": "ООО ЗдравСеть",
+      "inn": "3344556677",
+      "phone": "+7 888 999-00-11",
+      "email": "mihailov@zdravset.ru",
+      "moderation_status": "rejected",
+      "created_at": "2025-06-09T11:00:38.475Z",
+      "updated_at": "2025-06-09T11:00:38.475Z",
+      "tags": [
+        3,
+        20
+      ]
+    }
+  }
+]

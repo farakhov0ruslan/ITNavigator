@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}IT-Навигатор{% endblock %}
+
+{% block content %}
+	<div class="text-center text-white mb-5 px-3">
+		<p class="fs-5 mb-2">
+			Информационный сервис по поиску мер поддержки для ИТ-компаний
+			и организаций иных сфер, внедряющих цифровые технологии
+		</p>
+		<p class="fs-5">
+			Открытая платформа для размещения, предложений и поиска ИТ-решений
+		</p>
+	</div>
+
+	<!-- ===== БЛОК С КНОПКАМИ (ниже текста) ===== -->
+	<div class="d-flex gap-4">
+		<a href="{% url "catalog:solutions" %}" class="btn btn-light rounded-pill px-4 py-2">
+			Каталог IT-решений
+		</a>
+		<a href="{% url 'catalog:requests' %}" class="btn btn-light rounded-pill px-4 py-2">
+			Запросы на IT-решения
+		</a>
+
+	</div>
+{% endblock %}

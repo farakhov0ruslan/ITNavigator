@@ -1,0 +1,208 @@
+/* --------------- СБРОС ПОЛЯ И ПО ДЕФОЛТНЫМ СТИЛЯМ --------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Jost', sans-serif;
+    height: 100%;
+}
+
+/* --------------- NAVBAR (ШАПКА) --------------- */
+/* Тёмно-синий фон для navbar-dark bg-dark */
+.navbar-dark.bg-dark {
+    background-color: #5c97e3 !important;
+}
+/* Цвет текста “IT-навигатор” */
+.navbar-brand .fs-5 {
+    color: #dbdbff !important;
+}
+
+/* --------------- КНОПКИ В КОНТЕНТЕ --------------- */
+/* btn-light: светлый фон и чёрный текст */
+.btn-light {
+    background-color: #e0e0e0;
+    color: #000;
+    transition: background-color 0.2s ease;
+}
+.btn-light:hover {
+    background-color: #d0d0d0;
+}
+/* Круглые (“pill”) границы */
+.rounded-pill {
+    border-radius: 30px !important;
+}
+
+.search-block {
+    display: flex;
+    background: white;
+    border: 2px solid #6200ea; /* Фиолетовая рамка */
+    border-radius: 15px;
+    padding: 15px;
+    gap: 15px;
+    position: relative; /* Для управления линиями */
+}
+
+/* Каждый элемент внутри блока */
+.search-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.5em;
+    position: relative; /* Для позиционирования линий */
+}
+
+/* Вертикальные линии между элементами */
+.search-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: -1em; /* Линия касается верхнего края */
+    right: 0; /* Расположение линии справа */
+    bottom: -1em; /* Линия касается нижнего края */
+    width: 2px; /* Толщина линии */
+    background-color: #6200ea; /* Цвет линии */
+    z-index: 1; /* Убедиться, что линия поверх содержимого */
+}
+
+.nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.bi {
+    font-size: 1.25rem;
+}
+
+/* Стили для кнопок и полей */
+
+.search-item button,
+.search-item input {
+    border: 2px solid #5c97e3;
+    border-radius: 25px;
+    padding: 10px 5px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+
+.search-item label {
+    padding: 10px 5px;
+}
+
+input::placeholder {
+    text-align: center;
+    font-weight: bold;
+}
+
+#cityInput {
+    border: 2px solid #5c97e3;
+    border-radius: 25px;
+    padding: 10px 5px;
+    font-weight: bold;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+input {
+    text-align: center; /* Центрируем текст внутри поля */
+}
+
+#budgetInput {
+    color: rgba(0, 0, 0, 0.7);
+    margin-right: 10px;
+    text-align: center;
+}
+
+#budgetInput::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* Убираем стрелочки для числовых полей ввода */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield; /* Для Firefox */
+    appearance: none; /* Для других браузеров */
+}
+
+/* Адаптивность */
+@media (max-width: 800px) {
+    .search-block {
+        flex-direction: column;
+    }
+
+    .search-item {
+        width: 100%;
+    }
+
+    /* Горизонтальные линии для малых экранов */
+    .search-item:not(:last-child)::after {
+        height: 0px;
+    }
+
+    /* Горизонтальные линии */
+    .search-item + .search-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -1em;
+        right: -1em;
+        height: 2px;
+        background-color: #5c97e3;
+        z-index: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-item {
+        width: 100%;
+    }
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #bdf31f; /* Новый цвет фона */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header{
+        background-color: #5c97e3
+}
+
+.nav-tabs {
+    border-bottom: none !important;
+}
+
+/* Цвет кнопок вкладок */
+.nav-tabs .nav-link {
+    color: #8BC34A;
+    background-color: transparent;
+    border: none;
+}
+
+/* Цвет активной кнопки */
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #8BC34A;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-success{
+    background-color: #8BC34A;
+}
+
+.btn-success:hover {
+    background-color: #7CB342; /* Темно-зеленый фон при наведении */
+}

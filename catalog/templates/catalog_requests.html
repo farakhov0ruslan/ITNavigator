@@ -1,0 +1,302 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Запросы на ИТ-решения{% endblock %}
+{% block head %}
+	<link rel="stylesheet" href="{% static 'deps/css/catalog-req.css' %}">
+{% endblock %}
+
+{% block content %}
+
+
+	<div class="container my-4">
+		<h2 class="mb-2 text-white">Запросы на ИТ-решения</h2>
+		<p class="text-light mb-4">
+			Здесь вы можете оставить запрос на поиск ИТ-решения, либо предложить своё решение на
+			открытый запрос.
+		</p>
+
+		{% if user.is_authenticated %}
+			<div class="mb-4">
+				<button
+						type="button"
+						class="btn btn-light rounded-pill px-4 py-2"
+						data-bs-toggle="modal"
+						data-bs-target="#requestModal"
+				>
+					+ Создать запрос на IT-решение
+				</button>
+			</div>
+		{% else %}
+			<span class="d-inline-block" data-bs-toggle="tooltip"
+			      title="Только для зарегистрированных пользователей как Заказчик-инициатор. Войдите, чтобы предложить решение">
+      <div class="mb-4">
+			<button
+					type="button"
+					class="btn btn-light rounded-pill px-4 py-2"
+					data-bs-toggle="modal"
+					data-bs-target="#requestModal"
+					disabled
+			>
+				+ Создать запрос на IT-решение
+			</button>
+		</div>
+    </span>
+		{% endif %}
+
+
+
+		<!-- Flash-сообщения -->
+		{% if messages %}
+			<div class="mt-3">
+				{% for message in messages %}
+					<div class="alert alert-{{ message.tags }} text-white alert-dismissible fade show"
+					     role="alert">
+						{{ message }}
+						<button type="button" class="btn-close" data-bs-dismiss="alert"
+						        aria-label="Закрыть"></button>
+					</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+
+		<form method="get" action="">
+			<div class="catalog-header">
+				<div class="total-count">
+					Открытых запросов: <strong>{{ requests|length }}</strong>
+				</div>
+
+				<input
+						type="text"
+						name="q"
+						class="form-control search-input"
+						placeholder="Поиск запроса…"
+						value="{{ search_query }}"
+						aria-label="Поиск запроса"
+				/>
+
+				<button type="submit" class="btn btn-outline-light">Поиск</button>
+			</div>
+		</form>
+
+		<div class="row g-4">
+			{% for req in requests %}
+				<div class="col-12 col-md-6 col-lg-4">
+					<div
+							class="card custom-card h-100 shadow-sm"
+							data-bs-toggle="modal"
+							data-bs-target="#requestDetailModal"
+							data-bs-title="{{ req.title }}"
+							data-bs-description="{{ req.short_description }}"
+							data-bs-contact="{{ req.contact_name }}"
+							data-bs-company="{{ req.company_name }}"
+							data-bs-phone="{{ req.phone }}"
+							data-bs-email="{{ req.email }}"
+							data-bs-inn="{{ req.inn }}"
+					>
+						<div class="card-body">
+							<h5 class="card-title">{{ req.title|truncatechars:45 }}</h5>
+							<p class="card-text">{{ req.short_description|truncatechars:80 }}</p>
+							{% if req.tags.all %}
+								<div class="mt-3">
+									{% for tag in req.tags.all %}
+										<span class="badge bg-secondary">{{ tag.name }}</span>
+									{% endfor %}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+			{% empty %}
+				<div class="col-12">
+					<p class="text-light">Пока нет одобренных запросов.</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+	<!-- Модальное окно с деталями запроса -->
+	<div
+			class="modal fade"
+			id="requestDetailModal"
+			tabindex="-1"
+			aria-labelledby="requestDetailModalLabel"
+			aria-hidden="true"
+	>
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="requestDetailModalLabel"></h5>
+					<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="modal"
+							aria-label="Закрыть"
+					></button>
+				</div>
+				<div class="modal-body">
+					<p id="requestDetailDescription"></p>
+					<hr>
+					<p class="mb-1"><strong>Контактное лицо:</strong> <span
+							id="requestDetailContact"></span></p>
+					<p class="mb-1"><strong>Компания / ИП:</strong> <span
+							id="requestDetailCompany"></span></p>
+					<p class="mb-1"><strong>ИНН:</strong> <span id="requestDetailINN"></span></p>
+					<p class="mb-1"><strong>Телефон:</strong> <span id="requestDetailPhone"></span>
+					</p>
+					<p class="mb-3"><strong>Email:</strong> <span id="requestDetailEmail"></span>
+					</p>
+					<p class="text-muted fst-italic">
+						Чтобы откликнуться на IT-решение, напишите контактному лицу.
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button
+							type="button"
+							class="btn btn-secondary"
+							data-bs-dismiss="modal"
+					>
+						Закрыть
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Модальное окно создания запроса -->
+	<div
+			class="modal fade"
+			id="requestModal"
+			tabindex="-1"
+			aria-labelledby="requestModalLabel"
+			aria-hidden="true"
+	>
+		<div class="modal-dialog modal-lg modal-dialog-centered">
+			<div class="modal-content bg-dark text-white border-0">
+				<div class="modal-header border-0">
+					<h5 class="modal-title" id="requestModalLabel">Создать запрос на IT-решение</h5>
+					<button
+							type="button"
+							class="btn-close btn-close-white"
+							data-bs-dismiss="modal"
+							aria-label="Закрыть"
+					></button>
+				</div>
+				<div class="modal-body">
+					<form
+							id="requestForm"
+							method="post"
+							action="{% url 'catalog:request_create' %}"
+					>
+						{% csrf_token %}
+						{{ request_form.non_field_errors }}
+
+						<!-- Категория -->
+						<div class="mb-3">
+							{{ request_form.category.label_tag }}
+							{{ request_form.category }}
+							{% for err in request_form.category.errors %}
+								<div class="text-danger small">{{ err }}</div>
+							{% endfor %}
+						</div>
+
+						<!-- Заголовок -->
+						<div class="mb-3">
+							{{ request_form.title.label_tag }}
+							{{ request_form.title }}
+							{% for err in request_form.title.errors %}
+								<div class="text-danger small">{{ err }}</div>
+							{% endfor %}
+						</div>
+
+						<!-- Краткое описание -->
+						<div class="mb-3">
+							{{ request_form.short_description.label_tag }}
+							{{ request_form.short_description }}
+							{% for err in request_form.short_description.errors %}
+								<div class="text-danger small">{{ err }}</div>
+							{% endfor %}
+						</div>
+
+						<!-- Компания и ИНН -->
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								{{ request_form.company_name.label_tag }}
+								{{ request_form.company_name }}
+								{% for err in request_form.company_name.errors %}
+									<div class="text-danger small">{{ err }}</div>
+								{% endfor %}
+							</div>
+							<div class="col-md-6 mb-3">
+								{{ request_form.inn.label_tag }}
+								{{ request_form.inn }}
+								{% for err in request_form.inn.errors %}
+									<div class="text-danger small">{{ err }}</div>
+								{% endfor %}
+							</div>
+						</div>
+
+						<!-- Контактное лицо -->
+						<div class="mb-3">
+							{{ request_form.contact_name.label_tag }}
+							{{ request_form.contact_name }}
+							{% for err in request_form.contact_name.errors %}
+								<div class="text-danger small">{{ err }}</div>
+							{% endfor %}
+						</div>
+
+						<!-- Телефон и Email -->
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								{{ request_form.phone.label_tag }}
+								{{ request_form.phone }}
+								{% for err in request_form.phone.errors %}
+									<div class="text-danger small">{{ err }}</div>
+								{% endfor %}
+							</div>
+							<div class="col-md-6 mb-3">
+								{{ request_form.email.label_tag }}
+								{{ request_form.email }}
+								{% for err in request_form.email.errors %}
+									<div class="text-danger small">{{ err }}</div>
+								{% endfor %}
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer border-0 justify-content-center">
+					<button
+							type="submit"
+							form="requestForm"
+							class="btn btn-primary btn-lg btn-pill"
+					>
+						Отправить
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+        const reqModal = document.getElementById('requestDetailModal');
+        reqModal.addEventListener('show.bs.modal', event => {
+            const card = event.relatedTarget;
+            reqModal.querySelector('#requestDetailModalLabel').textContent =
+                card.getAttribute('data-bs-title');
+            reqModal.querySelector('#requestDetailDescription').textContent =
+                card.getAttribute('data-bs-description');
+            reqModal.querySelector('#requestDetailContact').textContent =
+                card.getAttribute('data-bs-contact');
+            reqModal.querySelector('#requestDetailCompany').textContent =
+                card.getAttribute('data-bs-company');
+            reqModal.querySelector('#requestDetailINN').textContent =
+                card.getAttribute('data-bs-inn');
+            reqModal.querySelector('#requestDetailPhone').textContent =
+                card.getAttribute('data-bs-phone');
+            reqModal.querySelector('#requestDetailEmail').textContent =
+                card.getAttribute('data-bs-email');
+        });
+	</script>
+
+{% endblock %}
